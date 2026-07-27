@@ -1,0 +1,34 @@
+{
+  "name": "pi-catppuccin",
+  "version": "0.1.0",
+  "description": "Unofficial Catppuccin themes for Pi",
+  "keywords": [
+    "pi-package",
+    "catppuccin",
+    "pi",
+    "theme",
+    "themes"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madeleineostoja/pi-catppuccin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/madeleineostoja/pi-catppuccin/issues"
+  },
+  "homepage": "https://github.com/madeleineostoja/pi-catppuccin#readme",
+  "files": [
+    "themes",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "npm pack --dry-run"
+  },
+  "pi": {
+    "themes": [
+      "./themes"
+    ]
+  }
+}

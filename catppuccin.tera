@@ -1,0 +1,147 @@
+---
+whiskers:
+  version: "^2.9.0"
+  matrix:
+    - flavor
+  filename: "themes/catppuccin-{{ flavor.identifier }}.json"
+---
+{% set raised_bg = base | add(lightness=4) -%}
+{% set blue_role = "blue" -%}
+{% set green_role = "green" -%}
+{% set yellow_role = "yellow" -%}
+{% set peach_role = "peach" -%}
+{% set teal_role = "teal" -%}
+{% set muted_role = "overlay1" -%}
+{% set dim_role = "overlay0" -%}
+{% set thinking_text_role = "overlay0" -%}
+{% set custom_text_role = "subtext0" -%}
+{% set secondary_content_role = "overlay0" -%}
+{% set tertiary_content_role = "overlay0" -%}
+{% if flavor.identifier == "latte" -%}
+{% set error_bg = raised_bg | mix(color=red, amount=0.95) -%}
+{% set thinking_low = base | mix(color=mauve, amount=0.55) -%}
+{% set thinking_medium = base | mix(color=mauve, amount=0.35) -%}
+{% set thinking_high = base | mix(color=mauve, amount=0.18) -%}
+{% set readable_blue = blue | sub(lightness=1) -%}
+{% set readable_green = green | sub(lightness=9) -%}
+{% set readable_yellow = yellow | sub(lightness=16) -%}
+{% set readable_peach = peach | sub(lightness=15) -%}
+{% set readable_teal = teal | sub(lightness=6) -%}
+{% set blue_role = "readableBlue" -%}
+{% set green_role = "readableGreen" -%}
+{% set yellow_role = "readableYellow" -%}
+{% set peach_role = "readablePeach" -%}
+{% set teal_role = "readableTeal" -%}
+{% set muted_role = "subtext0" -%}
+{% set dim_role = "overlay2" -%}
+{% set thinking_text_role = "subtext1" -%}
+{% set custom_text_role = "text" -%}
+{% set secondary_content_role = "subtext1" -%}
+{% set tertiary_content_role = "subtext0" -%}
+{% else -%}
+{% set error_bg = raised_bg | mix(color=red, amount=0.85) -%}
+{% set thinking_low = base | mix(color=mauve, amount=0.70) -%}
+{% set thinking_medium = base | mix(color=mauve, amount=0.45) -%}
+{% set thinking_high = base | mix(color=mauve, amount=0.20) -%}
+{% endif -%}
+{
+  "$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "catppuccin-{{ flavor.identifier }}",
+  "vars": {
+    "rosewater": "#{{ rosewater.hex }}",
+    "flamingo": "#{{ flamingo.hex }}",
+    "pink": "#{{ pink.hex }}",
+    "mauve": "#{{ mauve.hex }}",
+    "red": "#{{ red.hex }}",
+    "maroon": "#{{ maroon.hex }}",
+    "peach": "#{{ peach.hex }}",
+    "yellow": "#{{ yellow.hex }}",
+    "green": "#{{ green.hex }}",
+    "teal": "#{{ teal.hex }}",
+    "sky": "#{{ sky.hex }}",
+    "sapphire": "#{{ sapphire.hex }}",
+    "blue": "#{{ blue.hex }}",
+    "lavender": "#{{ lavender.hex }}",
+    "text": "#{{ text.hex }}",
+    "subtext1": "#{{ subtext1.hex }}",
+    "subtext0": "#{{ subtext0.hex }}",
+    "overlay2": "#{{ overlay2.hex }}",
+    "overlay1": "#{{ overlay1.hex }}",
+    "overlay0": "#{{ overlay0.hex }}",
+    "surface2": "#{{ surface2.hex }}",
+    "surface1": "#{{ surface1.hex }}",
+    "surface0": "#{{ surface0.hex }}",
+    "base": "#{{ base.hex }}",
+    "mantle": "#{{ mantle.hex }}",
+    "crust": "#{{ crust.hex }}",
+    "raisedBg": "#{{ raised_bg | hex }}",
+    "toolErrorBg": "#{{ error_bg | hex }}",
+    "thinkingLow": "#{{ thinking_low | hex }}",
+    "thinkingMedium": "#{{ thinking_medium | hex }}",
+    "thinkingHigh": "#{{ thinking_high | hex }}"{% if flavor.identifier == "latte" %},
+    "readableBlue": "#{{ readable_blue | hex }}",
+    "readableGreen": "#{{ readable_green | hex }}",
+    "readableYellow": "#{{ readable_yellow | hex }}",
+    "readablePeach": "#{{ readable_peach | hex }}",
+    "readableTeal": "#{{ readable_teal | hex }}"{% endif %}
+  },
+  "colors": {
+    "accent": "mauve",
+    "border": "surface0",
+    "borderAccent": "surface2",
+    "borderMuted": "surface0",
+    "success": "{{ green_role }}",
+    "error": "red",
+    "warning": "{{ yellow_role }}",
+    "muted": "{{ muted_role }}",
+    "dim": "{{ dim_role }}",
+    "text": "text",
+    "thinkingText": "{{ thinking_text_role }}",
+    "selectedBg": "surface0",
+    "userMessageBg": "raisedBg",
+    "userMessageText": "text",
+    "customMessageBg": "surface0",
+    "customMessageText": "{{ custom_text_role }}",
+    "customMessageLabel": "mauve",
+    "toolPendingBg": "raisedBg",
+    "toolSuccessBg": "raisedBg",
+    "toolErrorBg": "toolErrorBg",
+    "toolTitle": "mauve",
+    "toolOutput": "subtext0",
+    "mdHeading": "{{ peach_role }}",
+    "mdLink": "{{ blue_role }}",
+    "mdLinkUrl": "{{ tertiary_content_role }}",
+    "mdCode": "{{ teal_role }}",
+    "mdCodeBlock": "text",
+    "mdCodeBlockBorder": "surface0",
+    "mdQuote": "{{ secondary_content_role }}",
+    "mdQuoteBorder": "surface0",
+    "mdHr": "surface0",
+    "mdListBullet": "mauve",
+    "toolDiffAdded": "{{ green_role }}",
+    "toolDiffRemoved": "red",
+    "toolDiffContext": "{{ tertiary_content_role }}",
+    "syntaxComment": "{{ tertiary_content_role }}",
+    "syntaxKeyword": "mauve",
+    "syntaxFunction": "{{ blue_role }}",
+    "syntaxVariable": "{{ peach_role }}",
+    "syntaxString": "{{ green_role }}",
+    "syntaxNumber": "{{ peach_role }}",
+    "syntaxType": "{{ teal_role }}",
+    "syntaxOperator": "mauve",
+    "syntaxPunctuation": "subtext0",
+    "thinkingOff": "surface0",
+    "thinkingMinimal": "surface1",
+    "thinkingLow": "thinkingLow",
+    "thinkingMedium": "thinkingMedium",
+    "thinkingHigh": "thinkingHigh",
+    "thinkingXhigh": "mauve",
+    "thinkingMax": "mauve",
+    "bashMode": "{{ peach_role }}"
+  },
+  "export": {
+    "pageBg": "base",
+    "cardBg": "raisedBg",
+    "infoBg": "surface0"
+  }
+}

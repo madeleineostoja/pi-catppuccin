@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  whiskers:
+    uses: catppuccin/actions/.github/workflows/whiskers-check.yml@7dbd6ccbbae3d57d278baa8ccaf837778a5e604d
+    with:
+      args: catppuccin.tera
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: 22
+      - run: npm run check
