@@ -18,8 +18,10 @@
     "url": "https://github.com/madeleineostoja/pi-catppuccin/issues"
   },
   "homepage": "https://github.com/madeleineostoja/pi-catppuccin#readme",
+  "image": "https://raw.githubusercontent.com/madeleineostoja/pi-catppuccin/main/assets/screenshot.png",
   "files": [
     "themes",
+    "assets",
     "README.md",
     "LICENSE"
   ],
