@@ -2,15 +2,17 @@
 <h1>Pi Catppuccin</h1>
   <img src="assets/icon.png" width="140" alt="Pi Catppuccin icon"/>
   <p>
-    <strong>Warm, soothing flavours for your favourite coding agent. ☕</strong>
+    <strong>An unofficial Catppuccin theme for Pi. ☕</strong>
   </p>
   <p>
+    <a href="https://www.npmjs.com/package/pi-catppuccin"><img src="https://img.shields.io/npm/v/pi-catppuccin?colorA=363a4f&colorB=c6a0f6&style=for-the-badge" alt="npm version"/></a>
+    <a href="https://www.npmjs.com/package/pi-catppuccin"><img src="https://img.shields.io/npm/dm/pi-catppuccin?colorA=363a4f&colorB=8aadf4&style=for-the-badge" alt="npm downloads"/></a>
     <a href="https://github.com/madeleineostoja/pi-catppuccin/issues"><img src="https://img.shields.io/github/issues/madeleineostoja/pi-catppuccin?colorA=363a4f&colorB=f5a97f&style=for-the-badge" alt="GitHub issues"/></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-a6da95?style=for-the-badge&labelColor=363a4f" alt="MIT license"/></a>
   </p>
 </div>
 
-An unofficial Catppuccin theme for the [Pi](https://pi.dev) agent harness, adapting Catppuccin palettes with a focus on a muted calm experience.
+Catppuccin's four flavours for the [Pi](https://pi.dev) agent harness, adapted with a focus on a calm, muted experience.
 
 <p align="center">
   <img src="assets/screenshot.png" alt="Pi using the Catppuccin Macchiato theme"/>
@@ -18,10 +20,10 @@ An unofficial Catppuccin theme for the [Pi](https://pi.dev) agent harness, adapt
 
 ## 🛠️ Usage
 
-Install the package straight from GitHub:
+Install the package from npm:
 
 ```sh
-pi install git:github.com/madeleineostoja/pi-catppuccin
+pi install npm:pi-catppuccin
 ```
 
 Open `/settings` in Pi and choose your favourite flavour. That's it — save and enjoy!
@@ -30,7 +32,7 @@ Open `/settings` in Pi and choose your favourite flavour. That's it — save and
 | ------------ | ---------------------- | -------------------------------------------------- |
 | 🌻 Latte     | `catppuccin-latte`     | Light, bright, and tuned for comfortable contrast. |
 | 🪴 Frappé    | `catppuccin-frappe`    | Soft and muted.                                    |
-| 🌺 Macchiato | `catppuccin-macchiato` | Rich, balanced, and my daily driver.               |
+| 🌺 Macchiato | `catppuccin-macchiato` | Rich, balanced, and suited to everyday use.        |
 | 🌿 Mocha     | `catppuccin-mocha`     | The deepest and coziest of the bunch.              |
 
 Want Pi to follow your terminal's light and dark appearance? Pair two flavours in `~/.pi/agent/settings.json`:
@@ -54,8 +56,8 @@ pi -e /absolute/path/to/pi-catppuccin
 ### Updating or removing
 
 ```sh
-pi update --extensions
-pi remove git:github.com/madeleineostoja/pi-catppuccin
+pi update npm:pi-catppuccin
+pi remove npm:pi-catppuccin
 ```
 
 ## ✨ About
