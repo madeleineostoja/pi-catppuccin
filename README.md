@@ -1,6 +1,5 @@
 <div align="center">
 <h1>Pi Catppuccin</h1>
-  <img src="assets/icon.png" width="140" alt="Pi Catppuccin icon"/>
   <p>
     <strong>An unofficial Catppuccin theme for Pi. ☕</strong>
   </p>
@@ -92,9 +91,3 @@ Automated checks keep generated files in sync and smoke-test the package. A visu
 - [otahontas/pi-coding-agent-catppuccin](https://github.com/otahontas/pi-coding-agent-catppuccin) and [scarcekoi/pi](https://github.com/scarcekoi/pi) for visual and tooling inspiration
 
 Released under the [MIT License](LICENSE).
-
-&nbsp;
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg" alt="Catppuccin footer"/>
-</p>
